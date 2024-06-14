@@ -14,14 +14,33 @@ namespace combateCSharp
         public int Attack { get; private set; }
         public int Armor { get; private set; }
         
-
-        public Champion (string name, int life, int attack, int armor)
+       public Champion (string name, int life, int attack, int armor)
         {
             Name = name;
             Life = life;
             Attack = attack;
             Armor = armor;            
         }
+
+        public void TakeDamage(int attack)
+        {
+            int damage = Math.Max(1, attack - Armor);
+            Life = Math.Max(0, Life - damage);
+        }
+
+        public string Status()
+        {
+            if (Life == 0)
+            {
+                return $"{Name}: {Life} de vida (morreu)";
+            }
+            else
+            {
+                return $"{Name}: {Life} de vida";
+            }
+        }
+
+
 
     }
 }
