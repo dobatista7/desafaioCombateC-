@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Digite os dados do primeiro campeão: ");
+            Champion champion1 = Champion.CreateChampion();
+            
         }
     }
 }

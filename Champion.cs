@@ -40,7 +40,23 @@ namespace combateCSharp
             }
         }
 
+        public static Champion CreateChampion()
+        {
+            Console.Write("Nome: ");
+            string name = Console.ReadLine();
 
+            Console.Write("Vida inicial: ");
+            int life = int.Parse(Console.ReadLine());
+
+            Console.Write("Ataque: ");
+            int attack = int.Parse(Console.ReadLine());
+
+            Console.Write("Armadura: ");
+            int armor = int.Parse(Console.ReadLine());
+
+            return new Champion(name, life, attack, armor);
+
+        }
 
     }
 }
