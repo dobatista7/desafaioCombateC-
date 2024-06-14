@@ -21,7 +21,7 @@
                 champion1.TakeDamage(champion2.Attack);
                 champion2.TakeDamage(champion1.Attack);
 
-                Console.Write($"Resultado do turno{i}:");
+                Console.WriteLine($"Resultado do turno {i}:");
                 Console.WriteLine(champion1.Status());
                 Console.WriteLine(champion2.Status());
                 Console.WriteLine();
@@ -32,7 +32,7 @@
                 }
             }
 
-            Console.WriteLine("FIM DO COMBATE");
+            Console.WriteLine("FIM DO COMBATE!");
             
         }
     }
